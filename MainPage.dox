@@ -1,0 +1,30 @@
+/**
+@mainpage Dokumentacja Zadania Średniowiecze
+
+# Middle ages
+
+### Game description
+Game is played on square board of size `n * n` (`8 < n < 2^31`)
+by two players taking turns making their moves. Every player controls
+his pieces from one of three types: king, knight, peasant. 
+At the beginning of the game player has 1 king, 1 peasant and 2 knights,
+which are placed next to each other in horizontal line in order 
+king, peasant, knight, knight. Placement is determined by randomizing
+positions of kings from first `n - 3` columns in a way that
+the distance between kings is at least 8 in maximum metric space.
+
+During every turn player can move each of his pieces once.
+Every piece can move one square in every direction, in addition a peasant
+can produce another peasant or a knight. When two pieces are on the same
+square they fight. When two pieces of the same type fight, they both die and
+disappear from the board. Otherwise a knight wins with a king or a peasant, and
+a king defeats a peasant. A player can not have two pieces on the same square.
+A peasant can produce a piece on any of free neighbouring squares
+if and only if he did not take any action in the last two turns.
+So for example if a peasant moved in turn `k' he can produce a piece
+in turn `k + 3`.
+
+Game ends when one of kings dies or after `k-th` turn of a second player.
+The player having only alive king wins, otherwise it is a draw.
+
+*/
